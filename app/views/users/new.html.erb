@@ -1,0 +1,17 @@
+<% provide(:title, 'Sign up') %>
+<div class="container">
+    <h1>sign_up page</h1>
+    <%=form_for @user, url: users_create_path do |f|%>
+    <%= render 'shared/error_messages' %>
+        <p><%= f.label:name　%></p>
+        <p><%= f.text_field :name, :placeholder => "User name" %></p>
+        <p><%= f.label:email %></p>
+        <p><%= f.text_field :email, :placeholder => "email" %></p>
+        <p><%= f.label :password %></p>
+        <p><%= f.password_field  :password %></p>
+        <p><%= f.label :password_confirmation %></p>
+        <p><%= f.password_field :password_confirmation %></p>
+        <%=f.submit%>
+    <% end%>
+</div>
+

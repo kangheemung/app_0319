@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>guest book edit</h1>
+    <%= form_for @micropost, url: p_update_path(@micropost.id) do |f|%>
+        <p><%= f.label:content %></p>
+        <p><%= f.text_field :content %></p>
+        <p> <%= f.submit %></p>
+    <% end %>
+</div>
